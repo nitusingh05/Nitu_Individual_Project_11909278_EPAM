@@ -44,6 +44,11 @@ public class Google_Price_Cal_Test {
     public void checkInformationInVmClassString() throws InterruptedException
     {
 
+//        WebDriverManager.chromedriver().setup();
+//        driver = new ChromeDriver();
+//        obj = new Google_Price_Calculate_App(driver);
+//
+//        driver.get("https://cloud.google.com/products/calculator");
 
         driver.manage().window().maximize();
         obj.Number_Of_Instances_Field("4");
