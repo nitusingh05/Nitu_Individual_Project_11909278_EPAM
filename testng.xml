@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="I Can Win(Paste bin)">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="org.example.Pastebin_Project_Test">
+                <methods>
+                    <include name="loginverification"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
     <test verbose="2" preserve-order="true" name="Test1">
         <parameter name="browser" value="chrome"/>
-        <parameter name="Url" value="https://cloud.google.com/products/calculator"/>
         <classes>
-            <class name="org.example.Google_Price_Cal_Test">
+            <class name="org.example.Hurt_Me_Plenty_Test">
                 <methods><include name="checkInformationInVmClassString"/>
                     <include name="check_Data_is_correct"/>
                 </methods>
@@ -14,10 +23,10 @@
     </test>
     <test verbose="2" preserve-order="true" name="Test2">
         <parameter name="browser" value="firefox"/>
-        <parameter name="Url" value="https://cloud.google.com/products/calculator"/>
         <classes>
-            <class name="org.example.Google_Price_Cal_Test">
-                <methods><include name="checkInformationInVmClassString"/>
+            <class name="org.example.Hurt_Me_Plenty_Test">
+                <methods>
+                    <include name="checkInformationInVmClassString"/>
                     <include name="check_Data_is_correct"/>
                 </methods>
             </class>

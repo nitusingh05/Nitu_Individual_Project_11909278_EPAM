@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Smoke Suite" thread-count="6" parallel="true">
+    <test verbose="2" preserve-order="true" name="Google Cloud Price Calc - Chrome">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="org.example.Hurt_Me_Plenty_Test">
+                <methods>
+                    <include name="google_cloud_price_calc"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true" name="Google Cloud Price Calc - firefox">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="org.example.Hurt_Me_Plenty_Test">
+                <methods>
+                    <include name="google_cloud_price_calc"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

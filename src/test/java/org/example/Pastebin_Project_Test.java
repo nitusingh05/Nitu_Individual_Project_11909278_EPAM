@@ -5,20 +5,14 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 
-public class Pagebin_Project_Test {
-    WebDriver driver;
-
+public class Pastebin_Project_Test extends TestBase {
     @Test
     public void loginverification() throws InterruptedException {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.get("https://pastebin.com/");
-        driver.manage().window().maximize();
 
-        Pagebin_Project page = new Pagebin_Project(driver);
+        page.openpastebinlink();
+        Thread.sleep(2000);
         page.NewPaste();
         Thread.sleep(2000);
         JavascriptExecutor js2 = (JavascriptExecutor) driver;
@@ -37,9 +31,6 @@ public class Pagebin_Project_Test {
         Thread.sleep(2000);
 
     }
-    @AfterClass
-    void closeDriver () {
-        driver.close();
-    }
+
 }
 
